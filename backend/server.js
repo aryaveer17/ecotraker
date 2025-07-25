@@ -7,7 +7,11 @@ const app = express()
 const PORT = process.env.PORT || 5001
 
 // Middleware
-app.use(cors())
+app.use(cors({
+  origin: ['http://localhost:3000',process.env.FRONTEND_URL], // Replace with your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true   // agar cookies / auth token send kar rahe ho
+}));
 app.use(express.json())
 
 // MongoDB Connection with Console Confirmation
