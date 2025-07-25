@@ -1,28 +1,28 @@
-"use client"
+"use client";
 
-import { Routes, Route } from "react-router-dom"
-import { useEffect } from "react"
-import { useDispatch } from "react-redux"
-import Navbar from "./components/Navbar"
-import Dashboard from "./pages/Dashboard"
-import HabitTracker from "./pages/HabitTracker"
-import Challenges from "./pages/Challenges"
-import Leaderboard from "./pages/Leaderboard"
-import Forum from "./pages/Forum"
-import Login from "./pages/Login"
-import Register from "./pages/Register"
-import { loadUser } from "./store/slices/authSlice"
+import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import Navbar from "./components/Navbar";
+import Dashboard from "./pages/Dashboard";
+import HabitTracker from "./pages/HabitTracker";
+import Challenges from "./pages/Challenges";
+import Leaderboard from "./pages/Leaderboard";
+import Forum from "./pages/Forum";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import { loadUser } from "./store/slices/authSlice";
 
 function App() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
     // Load user from localStorage on app start
-    const token = localStorage.getItem("token")
+    const token = localStorage.getItem("token");
     if (token) {
-      dispatch(loadUser())
+      dispatch(loadUser());
     }
-  }, [dispatch])
+  }, [dispatch]);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -39,7 +39,7 @@ function App() {
         </Routes>
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
