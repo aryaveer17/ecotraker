@@ -17,3 +17,4 @@ const auth = (req, res, next) => {
 }
 
 module.exports = auth
+// This middleware checks for a valid JWT token in the Authorization header.
