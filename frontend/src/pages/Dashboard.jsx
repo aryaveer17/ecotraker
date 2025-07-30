@@ -1,5 +1,5 @@
 "use client";
-
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Line } from "react-chartjs-2";
@@ -96,18 +96,18 @@ const Dashboard = () => {
           Track your sustainable habits and join the community
         </p>
         <div className="space-x-4">
-          <a
-            href="/register"
+          <Link
+            to="/register"
             className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
           >
             Get Started
-          </a>
-          <a
-            href="/login"
+          </Link>
+          <Link
+            to="/login"
             className="border border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50 transition-colors"
           >
             Login
-          </a>
+          </Link>
         </div>
       </div>
     );
