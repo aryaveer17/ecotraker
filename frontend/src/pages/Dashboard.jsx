@@ -96,18 +96,18 @@ const Dashboard = () => {
           Track your sustainable habits and join the community
         </p>
         <div className="space-x-4">
-          <Link
-            to="/register"
+          <a
+            href="/register"
             className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
           >
             Get Started
-          </Link>
-          <Link
-            to="/login"
+          </a>
+          <a
+            href="/login"
             className="border border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50 transition-colors"
           >
             Login
-          </Link>
+          </a>
         </div>
       </div>
     );

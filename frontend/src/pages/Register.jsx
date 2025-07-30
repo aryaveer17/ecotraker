@@ -206,7 +206,6 @@ const Register = () => {
               )}
             </div>
           </div>
-
           {/* Error message from API */}
           {error && (
             <div className="text-sm text-red-600 bg-red-100 p-2 rounded">
