@@ -76,7 +76,7 @@ const Register = () => {
     if (!validateForm()) {
       return;
     }
-
+    navigate("/login");
     const { confirmPassword, ...registerData } = formData;
     dispatch(register(registerData));
   };
